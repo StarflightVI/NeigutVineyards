@@ -14,6 +14,7 @@ html,body{height:100%}
 body{
   margin:0;
   font-family: 'Crimson Text', 'Georgia', serif;
+  font-size:1.25rem;
   background:var(--bg);
   background-image: 
     repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(139, 58, 58, 0.01) 2px, rgba(139, 58, 58, 0.01) 4px),
@@ -46,7 +47,7 @@ body{
   text-decoration:none;
   color:var(--brown);
   font-weight:700;
-  font-size:1.25rem;
+  font-size:1.75rem;
   letter-spacing:0.5px;
   text-shadow:1px 1px 2px rgba(74, 58, 42, 0.1);
   position:relative;
@@ -58,7 +59,7 @@ body{
   text-decoration:none;
   padding:0.4rem 0.75rem;
   border-radius:4px;
-  font-size:0.95rem;
+  font-size:1.2rem;
   transition:all 0.2s ease;
   position:relative;
 }
@@ -82,7 +83,7 @@ body{
   box-shadow:0 3px 8px rgba(139, 58, 58, 0.35), inset 0 1px 0 rgba(255,255,255,0.2);
   transform:translateY(-1px);
 }
-.accent-btn.small{padding:0.35rem 0.7rem;font-size:0.95rem}
+.accent-btn.small{padding:0.35rem 0.7rem;font-size:1.2rem}
 
 .nav-toggle{
   display:none;
@@ -103,10 +104,10 @@ body{
   display:grid;
   place-items:center;
   min-height:62vh;
-  padding:3rem calc(1rem + 100px);
+  padding:3rem 1rem;
   background:linear-gradient(135deg, rgba(139, 58, 58, 0.03) 0%, rgba(90, 107, 90, 0.03) 100%);
   position:relative;
-  overflow:visible;
+  overflow:hidden;
 }
 .hero::before{
   content:'';
@@ -124,6 +125,7 @@ body{
   position:relative;
   z-index:1;
   max-width:800px;
+  width:100%;
 }
 .hero h1{
   font-family:'Playfair Display', serif;
@@ -150,21 +152,26 @@ body{
   color:#3A3429;
   max-width:700px;
   margin:1.5rem auto 1rem;
-  font-size:1.1rem;
+  font-size:1.375rem;
   font-style:normal;
   line-height:1.8;
 }
 .hero-image{
-  margin-top:1.5rem;
-  max-width:1525px;
-  margin-left:-100px;
-  margin-right:-100px;
-  width:calc(100% + 200px);
+  margin-top:2rem;
+  width:100%;
+  max-width:1200px;
+  margin-left:auto;
+  margin-right:auto;
+  padding:0 1rem;
+  box-sizing:border-box;
+}
+.hero-image.container{
+  padding:0 1rem;
 }
 .hero-image img{
   width:100%;
   height:auto;
-  max-height:870px;
+  max-height:700px;
   object-fit:cover;
   border-radius:8px;
   border:2px solid rgba(139, 58, 58, 0.15);
@@ -194,7 +201,7 @@ body{
 .intro p{
   line-height:1.8;
   color:#3A3429;
-  font-size:1.05rem;
+  font-size:1.3125rem;
 }
 .intro::before{
   content:'';
@@ -235,7 +242,7 @@ body{
 .story p{
   line-height:1.8;
   color:#3A3429;
-  font-size:1.05rem;
+  font-size:1.3125rem;
   margin-bottom:1.25rem;
 }
 .placeholder{
@@ -298,8 +305,9 @@ body{
   gap:1.5rem;
   margin-top:2rem;
 }
-.products-grid-single{
-  grid-template-columns:1fr;
+.products-grid.products-grid-single,
+section.products-grid.products-grid-single{
+  grid-template-columns:1fr !important;
   max-width:400px;
   margin-left:auto;
   margin-right:auto;
@@ -353,8 +361,27 @@ body{
 }
 .product-card .muted{
   margin-bottom:1rem;
-  font-size:0.95rem;
+  font-size:1.1875rem;
   line-height:1.6;
+}
+.wine-backstory{
+  margin-top:3rem;
+  padding-top:2rem;
+  border-top:1px solid rgba(139, 58, 58, 0.15);
+  text-align:left;
+}
+.wine-backstory h3{
+  font-family:'Playfair Display', serif;
+  font-size:1.75rem;
+  color:var(--brown);
+  margin:0 0 1rem;
+  font-weight:600;
+}
+.wine-backstory p{
+  font-size:1.25rem;
+  line-height:1.7;
+  color:var(--muted);
+  margin:0;
 }
 
 .site-footer{
@@ -378,15 +405,22 @@ body{
 }
 
 /* Responsive */
+@media (min-width:1200px){
+  .hero{padding:3rem 2rem}
+  .hero-image{max-width:1400px}
+  .hero-image img{max-height:800px}
+}
 @media (max-width:900px){
   .collage-grid{grid-template-columns:repeat(2,1fr)}
-  .products-grid{grid-template-columns:repeat(2,1fr)}
+  .products-grid:not(.products-grid-single){grid-template-columns:repeat(2,1fr)}
+  .products-grid-single{grid-template-columns:1fr !important}
+  .hero-image img{max-height:600px}
 }
 @media (max-width:640px){
   .hero{padding:3rem 1rem;overflow:hidden}
   .hero h1{font-size:2rem}
   .hero h1::after{width:60px}
-  .tagline{font-size:1rem}
+  .tagline{font-size:1.25rem}
   .hero-image{width:100%;max-width:100%}
   .hero-image img{max-height:540px}
   .header-inner{gap:1rem}
@@ -406,6 +440,8 @@ body{
   .main-nav.open{display:flex}
   .nav-toggle{display:inline-block}
   .collage-grid img{height:120px}
-  .products-grid{grid-template-columns:1fr}
+  .products-grid:not(.products-grid-single){grid-template-columns:1fr}
+  .products-grid.products-grid-single,
+  section.products-grid.products-grid-single{grid-template-columns:1fr !important}
   .content h2{font-size:1.75rem}
 }

@@ -4,6 +4,8 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Order Wine — Neigut Vineyard</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
 </head>
@@ -11,7 +13,8 @@
   <header class="site-header">
     <div class="container header-inner">
       <a class="brand" href="index.html">Neigut Vineyard</a>
-      <nav class="main-nav">
+      <button class="nav-toggle" aria-expanded="false" aria-controls="main-nav">Menu</button>
+      <nav id="main-nav" class="main-nav">
         <a href="index.html">Home</a>
         <a href="our-story.html">Our Story</a>
         <a href="order.html" class="accent-btn small">Order Wine</a>
@@ -21,7 +24,18 @@
 
   <main class="container content">
     <h2>Order Wine</h2>
-    <p class="muted">A small, curated selection.</p>
+    <p class="muted">The Family & Friends Club of Brian Neigut
+      Welcome to the exclusive Family & Friends Club of Brian Neigut, a membership experience designed for those who appreciate the exceptional quality of Neigut Vineyard Pinot Noir. This private club is not open to the public and offers a unique opportunity to enjoy one of our finest wines in the comfort of your home. Membership includes two shipments per year, each containing 4 bottles of Neigut Vineyard Pinot Noir—8 bottles total over the course of the year.
+      We ask for a one-year commitment to the club, during which you’ll enjoy a variety of exclusive benefits:
+      15% discount on your club shipments, cost below includes that 15% discount. 
+      If you choose to add additional bottles to your club shipment, a 20% discount will be applied for 6 bottles or more.  
+      $25 flat-rate shipping on all club shipments to the contiguous United States 
+      The option to add extra bottles of Neigut Vineyard Pinot Noir to your bi-annual releases, all at a discounted rate and with no additional shipping fees beyond the $25 flat-rate.
+      Ship-only membership—releases are not available for pickup at Ken Wright Cellars tasting room.
+      The club discount is exclusive to the Family & Friends Club and cannot be applied to other Ken Wright Cellars wine.
+      Approximate Cost: $238 per shipment, plus $25 shipping fee and applicable state taxes.
+      We’re thrilled to have you as part of this exclusive club! Should you have any questions regarding your membership, please contact our club director, Ivory McLaughlin: wineclub@kenwrightcellars.com | 503-852-7070
+      </p>
 
     <section class="products-grid products-grid-single">
       <article class="product-card">
@@ -31,11 +45,19 @@
         <a class="accent-btn" href="#">Order</a>
       </article>
     </section>
+
+    <div class="wine-backstory">
+      <h3>How is Our Pinot Noir Different?</h3>
+      <p>In the famed Willamette Valley, Pinot noir has found its perfect home. Those locations where it naturally excels are a very small percentage of the valley…perhaps five percent at most. One of those special areas is the Yamhill Carlton American Viticultural Area, where Neigut Vineyard is located. 
+        The site was planted at an elevation of 400 to 450 feet and has a southeast exposure. Elevation and exposure are critical to successful Pinot noir production. All the highest-quality sites are between 300 and 900 feet in elevation. A southeast exposure will provide full morning sun with lower intensity and limited afternoon sun, which can increase the risk of sunburn or dehydration. In summary, Neigut Vineyard is perfectly situated.
+        The soil and geology profile is consistent throughout the site, with three-foot shallow topsoil and ancient marine sediments beneath that drain moisture quickly. The trace elements of the geology impart savory qualities of cola, cedar, chocolate, leather, and clove. The fruit is both blue and black, featuring blueberry, plum, black cherry, and currant.
+        Ken Wright Cellars is grateful for the opportunity to work with this world-class Pinot noir site.</p>
+    </div>
   </main>
 
   <footer class="site-footer">
     <div class="container">
-      <p>&copy; <span id="year3"></span> Neigut Vineyards</p>
+      <p>&copy; <span id="year3"></span> Neigut Vineyard</p>
     </div>
   </footer>
 

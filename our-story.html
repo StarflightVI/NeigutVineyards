@@ -3,7 +3,9 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Our Story — Neigut Vineyard</title>
+  <title>Our Story - Neigut Vineyard</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
 </head>
@@ -11,7 +13,8 @@
   <header class="site-header">
     <div class="container header-inner">
       <a class="brand" href="index.html">Neigut Vineyard</a>
-      <nav class="main-nav">
+      <button class="nav-toggle" aria-expanded="false" aria-controls="main-nav">Menu</button>
+      <nav id="main-nav" class="main-nav">
         <a href="index.html">Home</a>
         <a href="our-story.html">Our Story</a>
         <a href="order.html" class="accent-btn small">Order Wine</a>
@@ -31,7 +34,7 @@
         
         <p>Given the uncertainty around her health and the fact that I was raising two young boys on my own, I always found an excuse not to act – until I was traveling for work and she had to meet the property appraiser. I didn't hear from her after my meetings and was worried. When I called her, she was sitting on the deck of the house, knitting, and promptly asked, "What are you waiting for – this place is perfect, and there is never a perfect time in life."</p>
         
-        <p>Her partnership and strength over the years greatly influenced my decision to push forward with the project. In 2014, I (along with two of my closest friends who took a minority stake - Steve Singh & Mike Lippert) purchased the thirty-five-acre piece of land with the idea of turning the then-filbert farm into a world-class vineyard someday. Knowing nothing about vineyards or making wine, almost everyone around me, including many of you, thought I was crazy!</p>
+        <p>Her partnership and strength over the years greatly influenced my decision to push forward with the project. In 2014, I (along with a few of my closest friends - Steve & Heather Singh and Michael & Sarah Lippert who took a minority stake) purchased the thirty-five-acre piece of land with the idea of turning the then-filbert farm into a world-class vineyard someday. Knowing nothing about vineyards or making wine, almost everyone around me, including many of you, thought I was crazy!</p>
         
         <p>In the early days, my two boys, Wyatt and Beck, were instrumental in helping me develop the property – at first pulling weeds as they were only 6 and 8, but then they helped plant the blocks of grapes, cutting back thorny blackberry bushes, and eventually graduating to grading roads, and tractor work, including mowing and plowing. Today the landschaft surrounding the vineyard is beautiful and Brigitte's ashes grace the property's current three blocks of grapes. Anyone who knew her or walks the grounds today can feel her love of the place and her protection over the vines.</p>
         
@@ -51,7 +54,7 @@
         <div class="collage-grid">
           <img src="assets/landscape1.JPG" alt="Vineyard landscape image 1">
           <img src="assets/landscape2.JPG" alt="Vineyard landscape image 2">
-          <img src="assets/land3.JPG" alt="Vineyard landscape image 3">
+          <img src="assets/land3.jpg" alt="Vineyard landscape image 3">
           <img src="assets/people16.JPG" alt="Vineyard landscape image 4">
           <img src="assets/landscape7.jpg" alt="Vineyard landscape image 5">
           <img src="assets/people1.JPG" alt="Vineyard people image 1">
@@ -76,7 +79,7 @@
 
   <footer class="site-footer">
     <div class="container">
-      <p>&copy; <span id="year2"></span> Neigut Vineyards</p>
+      <p>&copy; <span id="year2"></span> Neigut Vineyard</p>
     </div>
   </footer>
 
