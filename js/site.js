@@ -4,7 +4,9 @@ document.addEventListener('DOMContentLoaded', function () {
   const btn = document.querySelector('.nav-toggle');
   const nav = document.getElementById('main-nav') || document.querySelector('.main-nav');
   if (btn && nav) {
-    btn.addEventListener('click', () => {
+    btn.addEventListener('click', function(e) {
+      e.preventDefault();
+      e.stopPropagation();
       const expanded = btn.getAttribute('aria-expanded') === 'true';
       btn.setAttribute('aria-expanded', String(!expanded));
       nav.classList.toggle('open');
