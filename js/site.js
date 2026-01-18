@@ -11,6 +11,28 @@ document.addEventListener('DOMContentLoaded', function () {
       btn.setAttribute('aria-expanded', String(!expanded));
       nav.classList.toggle('open');
     });
+
+    // Close menu when clicking on a link (mobile view)
+    nav.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', function(e) {
+        // Don't prevent default - allow navigation
+        // But close the menu
+        if (window.innerWidth <= 640) {
+          nav.classList.remove('open');
+          btn.setAttribute('aria-expanded', 'false');
+        }
+      });
+    });
+
+    // Close menu when clicking outside (mobile view)
+    document.addEventListener('click', function(e) {
+      if (window.innerWidth <= 640 && nav.classList.contains('open')) {
+        if (!nav.contains(e.target) && !btn.contains(e.target)) {
+          nav.classList.remove('open');
+          btn.setAttribute('aria-expanded', 'false');
+        }
+      }
+    });
   }
 
   // Hide the nav link that points to the current page
