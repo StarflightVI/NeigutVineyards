@@ -162,8 +162,8 @@ body{
   margin-top:0 !important;
   margin-bottom:0 !important;
   padding-top:0 !important;
-  width:94.09%;
-  max-width:1127px;
+  width:91.27%;
+  max-width:1093px;
   margin-left:auto;
   margin-right:auto;
   padding:0 1rem 0 1rem;
@@ -175,7 +175,7 @@ body{
 .hero-image img{
   width:100%;
   height:auto;
-  max-height:658px;
+  max-height:638px;
   object-fit:cover;
   border-radius:8px;
   border:2px solid rgba(139, 58, 58, 0.15);
@@ -476,22 +476,22 @@ section.products-grid.products-grid-single{
 /* Responsive */
 @media (min-width:1200px){
   .hero{padding:0 2rem 0 2rem}
-  .hero-image{max-width:1314px}
-  .hero-image img{max-height:751px}
+  .hero-image{max-width:1275px}
+  .hero-image img{max-height:728px}
 }
 @media (max-width:900px){
   .collage-grid{grid-template-columns:repeat(2,1fr)}
   .products-grid:not(.products-grid-single){grid-template-columns:repeat(2,1fr)}
   .products-grid-single{grid-template-columns:1fr !important}
-  .hero-image img{max-height:564px}
+  .hero-image img{max-height:547px}
 }
 @media (max-width:640px){
   .hero{padding:0 1rem 0 1rem;overflow:hidden}
   .hero h1{font-size:1.625rem}
   .hero h1::after{width:60px}
   .tagline{font-size:1.25rem}
-  .hero-image{width:85%;max-width:100%}
-  .hero-image img{max-height:507px}
+  .hero-image{width:82%;max-width:100%}
+  .hero-image img{max-height:492px}
   .header-inner{gap:1rem}
   .main-nav{
     display:none;
